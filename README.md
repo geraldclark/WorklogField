@@ -1,11 +1,7 @@
 WorklogField
 ============
 
-A custom worklog field type for Sugar 7
-
-Dashboard Manager
-================
-This is a module loadable plugin for use with SugarCRM.
+This is a module loadable field type for use with Sugar 7.
 
 The 'InstallerPackage' directory contains the files for the actual installer zip. To create an installer, you will need to zip the contents of this directory excluding the base 'InstallerPackage' directory.
 
