@@ -1,7 +1,8 @@
 WorklogField
 ============
 
-This is a module loadable field type for use with Sugar 7.
+This is a module loadable field type for use with Sugar 7. The key features of this field type is that worklog entries will be adjusted by the current users display preferences for user names, timezones, and date formats.
+This field was created as a replacement for the original worklog field by Jon Whitcraft ( http://h2ik.co/2012/02/sugarfield-worklog-v1-0-released/ ) as it is not currently being adapted from 6.x.
 
 Installation & Setup
 ============
