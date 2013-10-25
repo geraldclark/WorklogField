@@ -1,4 +1,4 @@
 WorklogField
 ============
 
-A custom worklog field type for SugarCRM
+A custom worklog field type for Sugar 7
