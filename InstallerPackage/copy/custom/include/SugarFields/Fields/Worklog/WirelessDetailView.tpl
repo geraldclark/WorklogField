@@ -1,1 +1,1 @@
-{$vardef.value|strip_tags|nl2br}
+{convert_worklog log={{sugarvar key='value' string=true}} }

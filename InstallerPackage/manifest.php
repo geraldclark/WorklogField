@@ -11,6 +11,8 @@ $manifest = array (
       4 => '7.5.0.0beta4',
       5 => '7.5.0.0RC1',
       6 => '7.5.0.0RC2',
+      7 => '7.5.0.0RC3',
+      8 => '7.5.0.0RC4',
     ),
     'regex_matches' => array (
       0 => '7\\.2\\.2\\.(.*?)', 
@@ -35,7 +37,7 @@ $manifest = array (
   'name' => 'SugarWorklogField',
   'published_date' => '2014-09-15 15:53:05',
   'type' => 'module',
-  'version' => '1.0',
+  'version' => '2.0',
   'remove_tables' => '',
 );
 
@@ -50,73 +52,108 @@ $installdefs = array (
     ),
     1 => 
     array (
+      'from' => '<basepath>/copy/custom/Extension/modules/DynamicFields/Ext/Language/en_us.worklog.php',
+      'to' => 'custom/Extension/modules/DynamicFields/Ext/Language/en_us.worklog.php',
+    ),
+    2 => 
+    array (
+      'from' => '<basepath>/copy/custom/Extension/modules/ModuleBuilder/Ext/Language/en_us.worklog.php',
+      'to' => 'custom/Extension/modules/ModuleBuilder/Ext/Language/en_us.worklog.php',
+    ),
+    3 => 
+    array (
       'from' => '<basepath>/copy/custom/clients/base/fields/worklog/detail.hbs',
       'to' => 'custom/clients/base/fields/worklog/detail.hbs',
     ),
-    2 => 
+    4 => 
     array (
       'from' => '<basepath>/copy/custom/clients/base/fields/worklog/disabled.hbs',
       'to' => 'custom/clients/base/fields/worklog/disabled.hbs',
     ),
-    3 => 
+    5 => 
     array (
       'from' => '<basepath>/copy/custom/clients/base/fields/worklog/edit.hbs',
       'to' => 'custom/clients/base/fields/worklog/edit.hbs',
     ),
-    4 => 
+    6 => 
     array (
       'from' => '<basepath>/copy/custom/clients/base/fields/worklog/list.hbs',
       'to' => 'custom/clients/base/fields/worklog/list.hbs',
     ),
-    5 => 
+    7 => 
     array (
       'from' => '<basepath>/copy/custom/clients/base/fields/worklog/readme.txt',
       'to' => 'custom/clients/base/fields/worklog/readme.txt',
     ),
-    6 => 
+    8 => 
     array (
       'from' => '<basepath>/copy/custom/clients/base/fields/worklog/worklog.js',
       'to' => 'custom/clients/base/fields/worklog/worklog.js',
     ),
-    7 => 
+    9 => 
     array (
       'from' => '<basepath>/copy/custom/clients/base/filters/operators/worklog.php',
       'to' => 'custom/clients/base/filters/operators/worklog.php',
     ),
-    8 => 
+    10 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/ClassicEditView.tpl',
       'to' => 'custom/include/SugarFields/Fields/Worklog/ClassicEditView.tpl',
     ),
-    9 => 
+    11 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/DetailView.tpl',
       'to' => 'custom/include/SugarFields/Fields/Worklog/DetailView.tpl',
     ),
-    10 => 
+    12 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/EditView.tpl',
       'to' => 'custom/include/SugarFields/Fields/Worklog/EditView.tpl',
     ),
-    11 => 
+    13 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/SugarFieldWorklog.php',
       'to' => 'custom/include/SugarFields/Fields/Worklog/SugarFieldWorklog.php',
     ),
-    12 => 
+    14 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/SugarFieldWorklogHelpers.php',
       'to' => 'custom/include/SugarFields/Fields/Worklog/SugarFieldWorklogHelpers.php',
     ),
-    13 => 
+    15 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/WirelessDetailView.tpl',
       'to' => 'custom/include/SugarFields/Fields/Worklog/WirelessDetailView.tpl',
     ),
-    14 => 
+    16 => 
     array (
       'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/WirelessEditView.tpl',
       'to' => 'custom/include/SugarFields/Fields/Worklog/WirelessEditView.tpl',
+    ),
+    17 => 
+    array (
+      'from' => '<basepath>/copy/custom/include/generic/SugarWidgets/SugarWidgetFieldWorklog.php',
+      'to' => 'custom/include/generic/SugarWidgets/SugarWidgetFieldWorklog.php',
+    ),
+    18 => 
+    array (
+      'from' => '<basepath>/copy/custom/modules/DynamicFields/templates/Fields/Forms/worklog.php',
+      'to' => 'custom/modules/DynamicFields/templates/Fields/Forms/worklog.php',
+    ),
+    19 => 
+    array (
+      'from' => '<basepath>/copy/custom/modules/DynamicFields/templates/Fields/Forms/worklog.tpl',
+      'to' => 'custom/modules/DynamicFields/templates/Fields/Forms/worklog.tpl',
+    ),
+    20 => 
+    array (
+      'from' => '<basepath>/copy/custom/modules/DynamicFields/templates/Fields/TemplateWorklog.php',
+      'to' => 'custom/modules/DynamicFields/templates/Fields/TemplateWorklog.php',
+    ),
+    21 => 
+    array (
+      'from' => '<basepath>/copy/custom/vendor/Smarty/plugins/function.convert_worklog.php',
+      'to' => 'custom/vendor/Smarty/plugins/function.convert_worklog.php',
     ),
   ),
   'post_execute' => 

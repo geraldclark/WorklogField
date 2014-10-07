@@ -278,18 +278,21 @@ class SugarFieldWorklogHelpers
         {
             if (isset($bean->fetched_row[$field]) && !empty($bean->fetched_row[$field]))
             {
+
+                $fetched_row = html_entity_decode($bean->fetched_row[$field], ENT_QUOTES);
+
                 //if the stored value is json
-                if (SugarFieldWorklogHelpers::isJson($bean->fetched_row[$field]))
+                if (SugarFieldWorklogHelpers::isJson($fetched_row))
                 {
-                    $value = $bean->fetched_row[$field];
-                    $worklogs = json_decode($bean->fetched_row[$field], true);
+                    $value = $fetched_row;
+                    $worklogs = json_decode($fetched_row, true);
                 }
                 else
                 {
-                    $value = $bean->fetched_row[$field];
+                    $value = $fetched_row;
                     //reformat the db value to add old logs into one message
                     $worklogs[0] = array(
-                        'msg' => $bean->fetched_row[$field],
+                        'msg' => $fetched_row,
                     );
                 }
             }
