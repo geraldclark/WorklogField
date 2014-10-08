@@ -8,7 +8,10 @@ Installation & Setup
 ============
 The 'InstallerPackage' directory contains the files for the actual installer package. To create an installer, you will need to zip the contents of this directory excluding the base 'InstallerPackage' directory. 
 
-Once installed, you will need to implement a custom vardef extension in ./custom/Extension/modules/<module>/Ext/Vardefs/<filename>.php that contains:
+Once installed, Administrators can navigate to Admin / Studio / <module> / Fields and create a new database field with the type of 'Worklog'.
+
+
+If you are a developer and would like to convert an existing field to a worklog type field, you will need to implement a custom vardef extension in ./custom/Extension/modules/<module>/Ext/Vardefs/<filename>.php that contains:
 
 ```php
 <?php
