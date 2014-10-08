@@ -127,7 +127,7 @@
                 long = long + "<hr>" + value;
             }
 
-            this.displayValue = {long: long};
+            this.displayValue = {long: long, short: long};
 
             this._settings.max_lines = parseInt(this._settings.max_lines);
 

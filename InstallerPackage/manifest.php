@@ -155,6 +155,11 @@ $installdefs = array (
       'from' => '<basepath>/copy/custom/vendor/Smarty/plugins/function.convert_worklog.php',
       'to' => 'custom/vendor/Smarty/plugins/function.convert_worklog.php',
     ),
+    22 => 
+    array (
+      'from' => '<basepath>/copy/custom/include/SugarFields/Fields/Worklog/ListView.tpl',
+      'to' => 'custom/include/SugarFields/Fields/Worklog/ListView.tpl',
+    ),
   ),
   'post_execute' => 
   array (
