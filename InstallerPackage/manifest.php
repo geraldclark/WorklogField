@@ -3,17 +3,6 @@
 $manifest = array (
   'acceptable_sugar_versions' => 
   array (
-    'exact_matches' => 
-    array (
-      1 => '7.5.0.0beta1',
-      2 => '7.5.0.0beta2',
-      3 => '7.5.0.0beta3',
-      4 => '7.5.0.0beta4',
-      5 => '7.5.0.0RC1',
-      6 => '7.5.0.0RC2',
-      7 => '7.5.0.0RC3',
-      8 => '7.5.0.0RC4',
-    ),
     'regex_matches' => array (
         0 => "7\.2\.*.*",
         1 => "7\.5\.*.*",
