@@ -7,17 +7,17 @@ class SugarFieldWorklog extends SugarFieldText
 {
     /**
      * Formats a field for the Sugar API
-     * @param array     $data
+     * @param array $data
      * @param SugarBean $bean
-     * @param array     $args
-     * @param string    $fieldName
-     * @param array     $properties
+     * @param array $args
+     * @param string $fieldName
+     * @param array $properties
      */
     public function apiFormatField(array &$data, SugarBean $bean, array $args, $fieldName, $properties)
     {
         global $current_user;
         $value = SugarFieldWorklogHelpers::decodeJsonValue($bean->$fieldName, $current_user, true);
-        $data[$fieldName."_history"] = $value;
+        $data[$fieldName . "_history"] = $value;
         $data[$fieldName] = '';
     }
 
@@ -30,7 +30,7 @@ class SugarFieldWorklog extends SugarFieldText
      */
     public function apiSave(SugarBean $bean, array $params, $field, $properties)
     {
-        parent::apiSave($bean,$params, $field, $properties);
+        parent::apiSave($bean, $params, $field, $properties);
         SugarFieldWorklogHelpers::addLogEntry($bean, $field, $bean->$field);
     }
 
@@ -44,8 +44,9 @@ class SugarFieldWorklog extends SugarFieldText
      */
     public function save($bean, $params, $field, $properties, $prefix = '')
     {
-       parent::save($bean, $params, $field, $properties, $prefix);
-       SugarFieldWorklogHelpers::addLogEntry($bean, $field, $bean->$field);
+        parent::save($bean, $params, $field, $properties, $prefix);
+        SugarFieldWorklogHelpers::addLogEntry($bean, $field, $bean->$field);
     }
 }
+
 ?>

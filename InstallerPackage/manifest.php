@@ -15,9 +15,10 @@ $manifest = array (
       8 => '7.5.0.0RC4',
     ),
     'regex_matches' => array (
-      0 => '7\\.2\\.2\\.(.*?)', 
-      1 => '7\\.5\\.(.*?)\\.(.*?)', 
-      2 => '7\\.6\\.(.*?)\\.(.*?)'
+        0 => "7\.2\.*.*",
+        1 => "7\.5\.*.*",
+        2 => "7\.6\.*.*",
+        3 => "7\.7\.*.*",
     ),
   ),
   'acceptable_sugar_flavors' => 
@@ -37,7 +38,7 @@ $manifest = array (
   'name' => 'SugarWorklogField',
   'published_date' => '2014-09-15 15:53:05',
   'type' => 'module',
-  'version' => '2.0',
+  'version' => '2.5',
   'remove_tables' => '',
 );
 
@@ -133,7 +134,7 @@ $installdefs = array (
     17 => 
     array (
       'from' => '<basepath>/copy/custom/include/generic/SugarWidgets/SugarWidgetFieldWorklog.php',
-      'to' => 'custom/include/generic/SugarWidgets/SugarWidgetFieldWorklog.php',
+      'to' => 'custom/include/generic/SugarWidgets/SugarWidgetFieldworklog.php',
     ),
     18 => 
     array (

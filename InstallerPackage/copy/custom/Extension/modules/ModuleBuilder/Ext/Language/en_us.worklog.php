@@ -1,3 +1,3 @@
 <?php
 
-$mod_strings['fieldTypes']['worklog']='Worklog';
+$mod_strings['fieldTypes']['worklog'] = 'Worklog';

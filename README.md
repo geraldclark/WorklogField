@@ -11,7 +11,7 @@ The 'InstallerPackage' directory contains the files for the actual installer pac
 Once installed, Administrators can navigate to Admin / Studio / {module>} / Fields and create a new database field with the type of 'Worklog'.
 
 
-If you are a developer and would like to convert an existing field to a worklog type field, you will need to implement a custom vardef extension in ./custom/Extension/modules/{module}/Ext/Vardefs/{filename}.php that contains:
+* If you are a developer and would like to convert an existing field to a worklog type field, you will need to implement a custom vardef extension in ./custom/Extension/modules/{module}/Ext/Vardefs/{filename}.php that contains:
 
 ```php
 <?php
@@ -27,9 +27,10 @@ If you are a developer and would like to convert an existing field to a worklog 
 ?>
 ```
 
-
-- This field does not currently support being sent in a stock email template.
-- If you need to decode the history json, you can do:
+* To implement report filtering, you will need to make a core file change in modules/Reports/templates/templates_modules_def_js.php at line 486 by adding  `filter_defs['worklog'] = qualifiers;`.
+* This field is not supported in workflow.
+* This field does not currently support being sent in a stock email template.
+* If you need to decode the history json for a customization, you can do:
 
 ```php
 <?php

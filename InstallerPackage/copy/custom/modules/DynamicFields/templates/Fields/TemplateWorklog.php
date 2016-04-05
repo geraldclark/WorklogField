@@ -1,9 +1,11 @@
 <?php
 
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 require_once('modules/DynamicFields/templates/Fields/TemplateText.php');
-class TemplateWorklog extends TemplateText{
+
+class TemplateWorklog extends TemplateText
+{
     var $type = 'text';
     var $len = '';
 
@@ -13,22 +15,23 @@ class TemplateWorklog extends TemplateText{
         $this->vardef_map['cols'] = 'ext3';
     }
 
-    function set($values){
+    function set($values)
+    {
         parent::set($values);
-        if(!empty($this->ext2)){
+        if (!empty($this->ext2)) {
             $this->rows = $this->ext2;
         }
-        if(!empty($this->ext3)){
+        if (!empty($this->ext3)) {
             $this->cols = $this->ext3;
         }
-        if(!empty($this->ext4)){
+        if (!empty($this->ext4)) {
             $this->default_value = $this->ext4;
         }
-
     }
 
 
-    function get_xtpl_detail(){
+    function get_xtpl_detail()
+    {
         $name = $this->name;
         return nl2br($this->bean->$name);
     }
@@ -38,15 +41,13 @@ class TemplateWorklog extends TemplateText{
         $def = parent::get_field_def();
         $def['studio'] = 'visible';
 
-        if ( isset ( $this->ext2 ) && isset ($this->ext3))
-        {
-            $def[ 'rows' ] = $this->ext2 ;
-            $def[ 'cols' ] = $this->ext3 ;
+        if (isset ($this->ext2) && isset ($this->ext3)) {
+            $def['rows'] = $this->ext2;
+            $def['cols'] = $this->ext3;
         }
-        if (isset( $this->rows ) && isset ($this->cols))
-        {
-            $def[ 'rows' ] = $this->rows ;
-            $def[ 'cols' ] = $this->cols ;
+        if (isset($this->rows) && isset ($this->cols)) {
+            $def['rows'] = $this->rows;
+            $def['cols'] = $this->cols;
         }
 
         //handle db type

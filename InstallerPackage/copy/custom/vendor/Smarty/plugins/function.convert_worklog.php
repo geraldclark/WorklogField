@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 /**
  * Smarty plugin to convert the worklog to html
@@ -10,8 +10,7 @@ require_once('custom/include/SugarFields/Fields/Worklog/SugarFieldWorklogHelpers
 
 function smarty_function_convert_worklog($params, &$smarty)
 {
-    if(empty($params['log']))
-    {
+    if (empty($params['log'])) {
         $smarty->trigger_error("Worklog: missing 'log' parameter");
     }
 
