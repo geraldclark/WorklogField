@@ -1,1 +1,0 @@
-<span class="sugar_field" id="{{sugarvar key='name'}}">{convert_worklog log={{sugarvar key='value' string=true}} }</span>
